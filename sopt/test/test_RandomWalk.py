@@ -21,18 +21,17 @@ from sopt.Optimizers.RandomWalk import RandomWalk
 
 class TestRandomWalk:
     def __init__(self):
-        self.func = quadratic50
-        self.func_type = quadratic50_func_type
-        self.variables_num = quadratic50_variables_num
-        self.lower_bound = quadratic50_lower_bound
-        self.upper_bound = quadratic50_upper_bound
+        self.func = Rosenbrock
+        self.func_type = Rosenbrock_func_type
+        self.variables_num = Rosenbrock_variables_num
+        self.lower_bound = Rosenbrock_lower_bound
+        self.upper_bound = Rosenbrock_upper_bound
         self.generations = 100
         self.init_step = 10
         self.eps = 1e-4
         self.vectors_num = 10
         self.init_pos = None
-        # self.complex_constraints = [constraints1,constraints2,constraints3]
-        self.complex_constraints = None
+        self.complex_constraints = [constraints1,constraints2,constraints3]
         self.complex_constraints_method = complex_constraints_method.loop
         self.RandomWalk = RandomWalk(**self.__dict__)
 

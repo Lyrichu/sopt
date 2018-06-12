@@ -14,7 +14,7 @@ some sample constraints functions
 def constraints1(x):
     x1 = x[0]
     x2 = x[1]
-    return x1**2 + x2**2 -6
+    return x1**2 + x2**2 -3
 
 def constraints2(x):
     x1 = x[0]

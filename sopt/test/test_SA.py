@@ -31,7 +31,7 @@ class TestSA:
         self.q = 0.9
         self.L = 100
         self.init_pos = None
-        self.complex_constraints = [constraints1,constraints2,constraints3]
+        #self.complex_constraints = [constraints1,constraints2,constraints3]
         self.complex_constraints_method = complex_constraints_method.loop
         self.SA = SA(**self.__dict__)
 

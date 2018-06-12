@@ -19,7 +19,7 @@ class BASIC_CONFIG:
         self.init_step = 10.0
         self.eps = 1e-4
         self.vectors_num = 10
-        self.init_pos = 10
+        self.init_pos = None
         self.complex_constraints = None
 
 class COMPLEX_CONSTRAINTS_METHOD:

@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 from sopt.util.random_walk_config import *
 import numpy as np
 
-class RandomWalk():
+class RandomWalk:
     def __init__(self,
                  variables_num,
                  lower_bound,
@@ -43,6 +43,8 @@ class RandomWalk():
         :param eps: the stop epsilon value
         :param vectors_num: numbers of vectors every time generate
         :param init_pos: the initial position
+        :param complex_constraints: the complex constraints,default is None
+        :param complex_constraints_method:currentlly only support 'loop' method 
         '''
         self.generations = generations
         self.init_step = init_step

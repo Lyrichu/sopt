@@ -14,26 +14,26 @@ test for GA
 from time import time
 import sys
 sys.path.append("..")
-from GA.GA import GA
+from sopt.GA.GA import GA
 from sopt.util.functions import *
 from sopt.util.ga_config import *
 from sopt.util.constraints import *
 
 class TestGA:
     def __init__(self):
-        self.func = quadratic11
-        self.func_type = quadratic11_func_type
-        self.variables_num = quadratic11_variables_num
-        self.lower_bound = quadratic11_lower_bound
-        self.upper_bound = quadratic11_upper_bound
+        self.func = Rosenbrock
+        self.func_type = Rosenbrock_func_type
+        self.variables_num = Rosenbrock_variables_num
+        self.lower_bound = Rosenbrock_lower_bound
+        self.upper_bound = Rosenbrock_upper_bound
         self.cross_rate = 0.8
-        self.mutation_rate = 0.05
-        self.generations = 200
-        self.population_size = 100
+        self.mutation_rate = 0.1
+        self.generations = 300
+        self.population_size = 200
         self.binary_code_length = 20
         self.cross_rate_exp = 1
         self.mutation_rate_exp = 1
-        self.code_type = code_type.binary
+        self.code_type = code_type.real 
         self.cross_code = False
         self.select_method = select_method.proportion
         self.rank_select_probs = None
@@ -43,10 +43,9 @@ class TestGA:
         self.arithmetic_cross_exp = 1
         self.mutation_method = mutation_method.uniform
         self.none_uniform_mutation_rate = 1
-        #self.complex_constraints = [constraints1,constraints2,constraints3]
-        self.complex_constraints = None
+        self.complex_constraints = [constraints1,constraints2,constraints3]
         self.complex_constraints_method = complex_constraints_method.penalty
-        self.complex_constraints_C = 1e6
+        self.complex_constraints_C = 1e8
         self.M = 1e8
         self.GA = GA(**self.__dict__)
 

@@ -45,6 +45,8 @@ class SA:
         :param q: the SA factor
         :param L: the length of SA link
         :param init_pos: the initial position
+        :param complex_constraints: the complex constraints,default is None
+        :param complex_constraints_method:currentlly only support 'loop' method
         '''
         self.func = func
         self.func_type = func_type

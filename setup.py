@@ -4,7 +4,7 @@ from setuptools import setup,find_packages
 
 setup(
     name="sopt",
-    version="0.0.6",
+    version="0.0.6.1",
     description="sopt:a simple python optimizer library",
     long_description=
     '''

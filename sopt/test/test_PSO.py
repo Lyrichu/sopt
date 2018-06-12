@@ -19,14 +19,13 @@ from sopt.util.pso_config import *
 from sopt.PSO.PSO import PSO
 from sopt.util.constraints import *
 
-
 class TestPSO:
     def __init__(self):
-        self.func = quadratic50
-        self.func_type = quadratic50_func_type
-        self.variables_num = quadratic50_variables_num
-        self.lower_bound = quadratic50_lower_bound
-        self.upper_bound = quadratic50_upper_bound
+        self.func = quadratic11
+        self.func_type = quadratic11_func_type
+        self.variables_num = quadratic11_variables_num
+        self.lower_bound = quadratic11_lower_bound
+        self.upper_bound = quadratic11_upper_bound
         self.c1 = basic_config.c1
         self.c2 = basic_config.c2
         self.generations = 200
@@ -37,7 +36,7 @@ class TestPSO:
         self.w_start = 0.9
         self.w_end = 0.4
         self.w_method = pso_w_method.linear_decrease
-        # self.complex_constraints = [constraints1,constraints2,constraints3]
+        #self.complex_constraints = [constraints1,constraints2,constraints3]
         self.complex_constraints = None
         self.complex_constraints_method = complex_constraints_method.loop
         self.PSO = PSO(**self.__dict__)

@@ -29,7 +29,7 @@ class SGA:
         '''
         :param lower_bound: the lower bound of variables,real number or list of real numbers
         :param upper_boound: the upper bound of variables,real number or list of real numbers
-        :param variable_num: the number of variables
+        :param variables_num: the number of variables
         :param func: the target function
         :param cross_rate: GA cross rate
         :param mutation_rate: GA mutation rate
@@ -222,7 +222,7 @@ class SGA:
         else:
             self.global_best_index = np.array(self.generations_best_targets).argmax()
 
-    def save_plot(self,save_name = "GA.png"):
+    def save_plot(self,save_name = "SGA.png"):
         plt.plot(self.generations_best_targets,'r-')
         plt.title("Best target function value for %d generations" % self.generations)
         plt.xlabel("generations")

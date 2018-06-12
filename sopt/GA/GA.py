@@ -47,7 +47,7 @@ class GA(SGA):
         '''
                 :param lower_bound: the lower bound of variables,real number or list of real numbers
                 :param upper_bound: the upper bound of variables,real number or list of real numbers
-                :param variable_num: the number of variables
+                :param variables_num: the number of variables
                 :param func: the target function
                 :param cross_rate: GA cross rate
                 :param mutation_rate: GA mutation rate

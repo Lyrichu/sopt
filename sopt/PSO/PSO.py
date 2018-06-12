@@ -146,7 +146,7 @@ class PSO:
             elif self.w_method == pso_w_method.square1:
                 w_ = self.w_start -(self.w_start-self.w_end)*(float(i)/self.generations)**2
             elif self.w_method == pso_w_method.square2:
-                w_ = self.w_start + (self.w_start-self.w_end)*(2*float(i)/self.generations-(i/self.generations)**2)
+                w_ = self.w_start - (self.w_start-self.w_end)*(2*float(i)/self.generations-(i/self.generations)**2)
             else:
                 w_ = self.w_end*((self.w_start/self.w_end)**(1/(1+10*i/self.generations)))
             self.v = w_*self.v + self.c1*np.random.rand(self.population_size,self.variables_num)*(self.best_individuals_points-self.population) + \
