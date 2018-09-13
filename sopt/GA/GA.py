@@ -20,29 +20,29 @@ from sopt.util.ga_config import *
 
 class GA(SGA):
     def __init__(self,lower_bound,upper_bound,variables_num,func,
-                 cross_rate = basic_config.cross_rate,
-                 mutation_rate = basic_config.mutation_rate,
-                 population_size = basic_config.population_size,
-                 generations = basic_config.generations,
-                 binary_code_length= basic_config.binary_code_length,
-                 func_type = basic_config.func_type_min,
+                 cross_rate = ga_config.cross_rate,
+                 mutation_rate = ga_config.mutation_rate,
+                 population_size = ga_config.population_size,
+                 generations = ga_config.generations,
+                 binary_code_length= ga_config.binary_code_length,
+                 func_type = ga_config.func_type_min,
                  # below is the new attribute of GA
-                 cross_rate_exp = basic_config.cross_rate_exp,
-                 mutation_rate_exp = basic_config.mutation_rate_exp,
+                 cross_rate_exp = ga_config.cross_rate_exp,
+                 mutation_rate_exp = ga_config.mutation_rate_exp,
                  code_type = code_type.binary,
                  cross_code = False,
                  select_method = select_method.proportion,
                  rank_select_probs = None,
-                 tournament_num = basic_config.tournament_num,
+                 tournament_num = ga_config.tournament_num,
                  cross_method = cross_method.one_point,
-                 arithmetic_cross_alpha = basic_config.arithmetic_cross_alpha,
-                 arithmetic_cross_exp = basic_config.arithmetic_cross_exp,
+                 arithmetic_cross_alpha = ga_config.arithmetic_cross_alpha,
+                 arithmetic_cross_exp = ga_config.arithmetic_cross_exp,
                  mutation_method = mutation_method.uniform,
-                 none_uniform_mutation_rate = basic_config.none_uniform_mutation_rate,
+                 none_uniform_mutation_rate = ga_config.none_uniform_mutation_rate,
                  complex_constraints = None,
                  complex_constraints_method = complex_constraints_method.penalty,
-                 complex_constraints_C = basic_config.complex_constraints_C,
-                 M = basic_config.M
+                 complex_constraints_C = ga_config.complex_constraints_C,
+                 M = ga_config.M
                  ):
         '''
                 :param lower_bound: the lower bound of variables,real number or list of real numbers
@@ -136,7 +136,7 @@ class GA(SGA):
             self.population = np.array(self.population).transpose()
             self.calculate(self.population,self.population,complex_constraints=self.complex_constraints,complex_constraints_C=self.complex_constraints_C)
 
-    def calculate(self,population,real_population = None,complex_constraints = None,complex_constraints_C = basic_config.complex_constraints_C):
+    def calculate(self,population,real_population = None,complex_constraints = None,complex_constraints_C = ga_config.complex_constraints_C):
         if self.code_type == code_type.binary:
             super(GA,self).calculate(population,complex_constraints = complex_constraints,complex_constraints_C = complex_constraints_C)
         elif self.code_type == code_type.gray:
@@ -157,7 +157,7 @@ class GA(SGA):
                     binary_population[i][j] = binary_population[i][j-1]^population[i][j]
         return binary_population
 
-    def select(self,probs = None,complex_constraints = None,complex_constraints_C = basic_config.complex_constraints_C,M=basic_config.M):
+    def select(self,probs = None,complex_constraints = None,complex_constraints_C = ga_config.complex_constraints_C,M=ga_config.M):
         if self.code_type == code_type.binary:
             real_population = self._convert_binary_to_real(self.population, self.cross_code)
         elif self.code_type == code_type.gray:
@@ -170,17 +170,17 @@ class GA(SGA):
             targets_func[i] = self.func(real_population[i])
             if complex_constraints is not None:
                 tmp_plus = self._check_constraints(real_population[i], complex_constraints)
-                if self.func_type == basic_config.func_type_min:
+                if self.func_type == ga_config.func_type_min:
                     targets_func[i] += tmp_plus * complex_constraints_C
                 else:
                     targets_func[i] -= tmp_plus * complex_constraints_C
                 if targets_func[i] < 0:
-                    if self.func_type == basic_config.func_type_min:
+                    if self.func_type == ga_config.func_type_min:
                         raise ValueError("Please make sure that the target function value is > 0!")
                     else:
                         targets_func[i] = 1 / (abs(targets_func[i])*M)
         assert (np.all(targets_func > 0) == True), "Please make sure that the target function value is > 0!"
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == ga_config.func_type_min:
             targets_func = 1. / targets_func
         if self.select_method == select_method.proportion or self.select_method == select_method.keep_best:
             prob_func = targets_func/np.sum(targets_func)
@@ -220,7 +220,7 @@ class GA(SGA):
             new_population = np.zeros_like(self.population)
             for i in range(self.population_size):
                 choice_indices = np.random.choice(self.population_size,self.tournament_num)
-                if self.func_type == basic_config.func_type_min:
+                if self.func_type == ga_config.func_type_min:
                     choice = choice_indices[np.argmin(targets_func[choice_indices])]
                 else:
                     choice = choice_indices[np.argmax(targets_func[choice_indices])]
@@ -381,18 +381,18 @@ class GA(SGA):
                     targets_func[i] = self.func(real_population[i])
                     if self.complex_constraints:
                         tmp_plus = self._check_constraints(real_population[i],self.complex_constraints)
-                        if self.func_type == basic_config.func_type_min:
+                        if self.func_type == ga_config.func_type_min:
                             targets_func[i] += tmp_plus
                         else:
                             targets_func -= tmp_plus
-                if self.func_type == basic_config.func_type_min:
+                if self.func_type == ga_config.func_type_min:
                     worst_target_index = np.argmax(targets_func)
                 else:
                     worst_target_index = np.argmin(targets_func)
                 self.population[worst_target_index] = self.global_best_raw_point
             self.global_generations_step += 1
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == ga_config.func_type_min:
             self.global_best_index = np.array(self.generations_best_targets).argmin()
         else:
             self.global_best_index = np.array(self.generations_best_targets).argmax()

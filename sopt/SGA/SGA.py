@@ -19,12 +19,12 @@ from sopt.util.ga_config import *
 
 class SGA:
     def __init__(self,lower_bound,upper_bound,variables_num,func,
-                 cross_rate = basic_config.cross_rate,
-                 mutation_rate = basic_config.mutation_rate,
-                 population_size = basic_config.population_size,
-                 generations = basic_config.generations,
-                 binary_code_length= basic_config.binary_code_length,
-                 func_type = basic_config.func_type_min
+                 cross_rate = ga_config.cross_rate,
+                 mutation_rate = ga_config.mutation_rate,
+                 population_size = ga_config.population_size,
+                 generations = ga_config.generations,
+                 binary_code_length= ga_config.binary_code_length,
+                 func_type = ga_config.func_type_min
                  ):
         '''
         :param lower_bound: the lower bound of variables,real number or list of real numbers
@@ -67,7 +67,7 @@ class SGA:
         self.population = np.random.randint(0,2,(self.population_size,self.variables_num*self.binary_code_length))
         self.calculate(self.population)
 
-    def calculate(self,population,real_population = None,complex_constraints = None,complex_constraints_C = basic_config.complex_constraints_C):
+    def calculate(self,population,real_population = None,complex_constraints = None,complex_constraints_C = ga_config.complex_constraints_C):
         '''
         calculate the global_best_target,global_best_points,
         generations_best_target,generations_best_points
@@ -86,11 +86,11 @@ class SGA:
                 targets_func[i] = self.func(real_population[i])
                 tmp_plus = self._check_constraints(real_population[i],complex_constraints)
                 if  tmp_plus > 0:
-                    if self.func_type == basic_config.func_type_min:
+                    if self.func_type == ga_config.func_type_min:
                         targets_func[i] += complex_constraints_C*tmp_plus
                     else:
                         targets_func[i] -= complex_constraints_C*tmp_plus
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == ga_config.func_type_min:
             if self.global_best_target is None:
                 self.global_best_target = np.min(targets_func)
                 self.global_best_raw_point = population[targets_func.argmin()]
@@ -124,7 +124,7 @@ class SGA:
         return res
 
 
-    def select(self,probs = None,complex_constraints = None,complex_constraints_C = basic_config.complex_constraints_C,M = basic_config.M):
+    def select(self,probs = None,complex_constraints = None,complex_constraints_C = ga_config.complex_constraints_C,M = ga_config.M):
         if probs is None:
             real_population = self._convert_binary_to_real(self.population)
             targets_func = np.zeros(self.population_size)
@@ -134,21 +134,21 @@ class SGA:
                 else:
                     targets_func[i] = self.func(real_population[i])
                     tmp_plus = self._check_constraints(real_population[i],complex_constraints)
-                    if self.func_type == basic_config.func_type_min:
+                    if self.func_type == ga_config.func_type_min:
                         targets_func[i] += tmp_plus*complex_constraints_C
                     else:
                         targets_func[i] -= tmp_plus*complex_constraints_C
                     if targets_func[i] < 0:
-                        if self.func_type == basic_config.func_type_min:
+                        if self.func_type == ga_config.func_type_min:
                             raise ValueError("Please make sure that the target function value is > 0!")
                         else:
                             targets_func = 1./(abs(targets_func[i])*M)
             assert (np.all(targets_func > 0) == True),"Please make sure that the target function value is > 0!"
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == ga_config.func_type_min:
                 targets_func = 1./targets_func
             prob_func = targets_func/np.sum(targets_func)
         else:
-            assert (len(probs) == self.population_size and abs(sum(probs)-1) < basic_config.eps), "rank_select_probs should be list or array of size %d,and sum to 1!" % self.population_size
+            assert (len(probs) == self.population_size and abs(sum(probs)-1) < ga_config.eps), "rank_select_probs should be list or array of size %d,and sum to 1!" % self.population_size
             prob_func = probs
         new_population = np.zeros_like(self.population)
         for i in range(self.population_size):
@@ -217,7 +217,7 @@ class SGA:
             self.cross()
             self.mutate()
             self.calculate(self.population)
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == ga_config.func_type_min:
             self.global_best_index = np.array(self.generations_best_targets).argmin()
         else:
             self.global_best_index = np.array(self.generations_best_targets).argmax()

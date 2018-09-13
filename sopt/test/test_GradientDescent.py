@@ -14,7 +14,7 @@ test for Gradient Descent
 import sys
 sys.path.append("..")
 from time import time
-from sopt.util.gradients_config import *
+from sopt.util.gradients_config import gradients_config
 from sopt.util.functions import *
 from sopt.Optimizers.Gradients import GradientDescent
 
@@ -40,6 +40,5 @@ class TestGradientDescent:
 
 if __name__ == '__main__':
     TestGradientDescent().test()
-
 
 

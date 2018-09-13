@@ -15,7 +15,7 @@ test for RMSProp
 import sys
 sys.path.append("..")
 from time import time
-from sopt.util.gradients_config import *
+from sopt.util.gradients_config import gradients_config
 from sopt.util.functions import *
 from sopt.Optimizers.Gradients import RMSProp
 
@@ -28,7 +28,7 @@ class TestRMSProp:
         self.init_variables = None
         self.lr = 10
         self.beta = 0.9
-        self.eps = basic_config.eps
+        self.eps = gradients_config.eps
         self.epochs = 1000
         self.RMSProp = RMSProp(**self.__dict__)
 

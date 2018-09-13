@@ -26,13 +26,13 @@ class TestRandomWalk:
         self.variables_num = Rosenbrock_variables_num
         self.lower_bound = Rosenbrock_lower_bound
         self.upper_bound = Rosenbrock_upper_bound
-        self.generations = 100
+        self.generations = 10
         self.init_step = 10
-        self.eps = 1e-4
+        self.eps = 1e-2
         self.vectors_num = 10
         self.init_pos = None
-        self.complex_constraints = [constraints1,constraints2,constraints3]
-        self.complex_constraints_method = complex_constraints_method.loop
+        # self.complex_constraints = [constraints1,constraints2,constraints3]
+        # self.complex_constraints_method = complex_constraints_method.loop
         self.RandomWalk = RandomWalk(**self.__dict__)
 
     def test(self):

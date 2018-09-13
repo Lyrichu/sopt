@@ -25,13 +25,13 @@ class PSO:
                  lower_bound,
                  upper_bound,
                  func,
-                 func_type = basic_config.func_type_min,
-                 c1 = basic_config.c1,
-                 c2 = basic_config.c2,
-                 generations = basic_config.generations,
-                 population_size = basic_config.population_size,
-                 vmax = basic_config.vmax,
-                 vmin = basic_config.vmin,
+                 func_type = pso_config.func_type_min,
+                 c1 = pso_config.c1,
+                 c2 = pso_config.c2,
+                 generations = pso_config.generations,
+                 population_size = pso_config.population_size,
+                 vmax = pso_config.vmax,
+                 vmin = pso_config.vmin,
                  w = 1,
                  w_start = 0.4,
                  w_end = 0.9,
@@ -168,17 +168,17 @@ class PSO:
 
             for k in range(self.population_size):
                 # update the best_individuals points
-                if (self.func(self.population[k]) < self.func(self.best_individuals_points[k]) and self.func_type == basic_config.func_type_min) or \
-                    (self.func(self.population[k]) > self.func(self.best_individuals_points[k]) and self.func_type == basic_config.func_type_max):
+                if (self.func(self.population[k]) < self.func(self.best_individuals_points[k]) and self.func_type == pso_config.func_type_min) or \
+                    (self.func(self.population[k]) > self.func(self.best_individuals_points[k]) and self.func_type == pso_config.func_type_max):
                     self.best_individuals_points[k] = self.population[k]
-                if (self.func(self.population[k]) < self.func(self.best_population_point) and self.func_type == basic_config.func_type_min) or \
-                        (self.func(self.population[k]) > self.func(self.best_population_point) and self.func_type == basic_config.func_type_max):
+                if (self.func(self.population[k]) < self.func(self.best_population_point) and self.func_type == pso_config.func_type_min) or \
+                        (self.func(self.population[k]) > self.func(self.best_population_point) and self.func_type == pso_config.func_type_max):
                     self.best_population_point = self.population[k]
                     self.best_population_target = self.func(self.best_population_point)
             self.generations_best_targets.append(self.best_population_target)
             self.generations_best_points.append(self.best_population_point)
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == pso_config.func_type_min:
             self.global_best_index = np.argmin(self.generations_best_targets)
         else:
             self.global_best_index = np.argmax(self.generations_best_targets)
@@ -193,7 +193,7 @@ class PSO:
         targets_func = np.zeros(self.population_size)
         for i in range(self.population_size):
             targets_func[i] = self.func(self.population[i])
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == pso_config.func_type_min:
             self.best_population_target = np.min(targets_func)
             best_population_index = np.argmin(targets_func)
             self.best_population_point = self.population[best_population_index]

@@ -24,13 +24,13 @@ class RandomWalk:
                  lower_bound,
                  upper_bound,
                  func,
-                 func_type = basic_config.func_type_min,
-                 generations = basic_config.generations,
-                 init_step = basic_config.init_step,
-                 eps = basic_config.eps,
-                 vectors_num = basic_config.vectors_num,
-                 init_pos=basic_config.init_pos,
-                 complex_constraints = basic_config.complex_constraints,
+                 func_type = random_walk_config.func_type_min,
+                 generations = random_walk_config.generations,
+                 init_step = random_walk_config.init_step,
+                 eps = random_walk_config.eps,
+                 vectors_num = random_walk_config.vectors_num,
+                 init_pos=random_walk_config.init_pos,
+                 complex_constraints = random_walk_config.complex_constraints,
                  complex_constraints_method = complex_constraints_method.loop
     ):
         '''
@@ -135,7 +135,7 @@ class RandomWalk:
                 else:
                     x1 = self._loop_check_constraints(x1,step)
                 # if we find a better solution
-                if (self.func_type == basic_config.func_type_min and self.func(x1) < self.func(x)) or (self.func_type == basic_config.func_type_max and self.func(x1) > self.func(x)):
+                if (self.func_type == random_walk_config.func_type_min and self.func(x1) < self.func(x)) or (self.func_type == random_walk_config.func_type_max and self.func(x1) > self.func(x)):
                     k = 1
                     x = x1
                 else:
@@ -149,7 +149,7 @@ class RandomWalk:
             self.walk_nums += 1
             if show_info:
                 print("Finish %d random walk!" % self.walk_nums)
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == random_walk_config.func_type_min:
             self.global_best_index = np.argmin(self.generations_best_targets)
             self.global_best_target = self.generations_best_targets[int(self.global_best_index)]
             self.global_best_point = self.generations_best_points[int(self.global_best_index)]
@@ -196,7 +196,7 @@ class RandomWalk:
                 f1_min = min(f1_list)
                 f1_index = f1_list.index(f1_min)
                 x11 = x1_list[f1_index]
-                if (self.func_type == basic_config.func_type_min and self.func(x1) < self.func(x)) or (self.func_type == basic_config.func_type_max and self.func(x1) > self.func(x)):
+                if (self.func_type == random_walk_config.func_type_min and self.func(x1) < self.func(x)) or (self.func_type == random_walk_config.func_type_max and self.func(x1) > self.func(x)):
                     k = 1
                     x = x11
                 else:
@@ -210,7 +210,7 @@ class RandomWalk:
             self.walk_nums += 1
             if show_info:
                 print("Finish %d random walk!" % self.walk_nums)
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == random_walk_config.func_type_min:
             self.global_best_index = np.argmin(self.generations_best_targets)
             self.global_best_target = self.generations_best_targets[int(self.global_best_index)]
             self.global_best_point = self.generations_best_points[int(self.global_best_index)]

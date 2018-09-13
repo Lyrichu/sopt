@@ -15,15 +15,16 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-from sopt.util.gradients_config import *
+from sopt.util.functions import *
+from sopt.util.gradients_config import gradients_config
 
 
 def gradients(func,variables):
     grads = np.zeros_like(variables)
     for i in range(len(variables)):
         variables_delta = np.copy(variables)
-        variables_delta[i] += basic_config.delta
-        grads[i] = (func(variables_delta)-func(variables))/basic_config.delta
+        variables_delta[i] += gradients_config.delta
+        grads[i] = (func(variables_delta)-func(variables))/gradients_config.delta
 
     return grads
 
@@ -31,10 +32,10 @@ class GradientDescent:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type = basic_config.func_type_min,
-                 init_variables = basic_config.init_variables,
-                 lr = basic_config.lr,
-                 epochs = basic_config.epochs
+                 func_type = gradients_config.func_type_min,
+                 init_variables = gradients_config.init_variables,
+                 lr = gradients_config.lr,
+                 epochs = gradients_config.epochs
                  ):
         '''
         basic GradientDescent
@@ -67,14 +68,14 @@ class GradientDescent:
         variables = self.init_variables
         for i in range(self.epochs):
             grads = gradients(self.func,variables)
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == gradients_config.func_type_min:
                 variables -= self.lr*grads
             else:
                 variables += self.lr*grads
             self.generations_points.append(variables)
             self.generations_targets.append(self.func(variables))
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == gradients_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]
@@ -110,11 +111,11 @@ class Momentum:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type = basic_config.func_type_min,
-                 init_variables = basic_config.init_variables,
-                 lr = basic_config.lr,
-                 beta = basic_config.momentum_beta,
-                 epochs = basic_config.epochs
+                 func_type = gradients_config.func_type_min,
+                 init_variables = gradients_config.init_variables,
+                 lr = gradients_config.lr,
+                 beta = gradients_config.momentum_beta,
+                 epochs = gradients_config.epochs
                  ):
         '''
         Momentum Optimizer
@@ -150,14 +151,14 @@ class Momentum:
         for i in range(self.epochs):
             grads = gradients(self.func,variables)
             self.m = self.beta*self.m + self.lr*grads
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == gradients_config.func_type_min:
                 variables -= self.m
             else:
                 variables += self.m
             self.generations_points.append(variables)
             self.generations_targets.append(self.func(variables))
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == gradients_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]
@@ -193,11 +194,11 @@ class AdaGrad:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type = basic_config.func_type_min,
-                 init_variables = basic_config.init_variables,
-                 lr = basic_config.adagrad_lr,
-                 eps = basic_config.eps,
-                 epochs = basic_config.epochs
+                 func_type = gradients_config.func_type_min,
+                 init_variables = gradients_config.init_variables,
+                 lr = gradients_config.adagrad_lr,
+                 eps = gradients_config.eps,
+                 epochs = gradients_config.epochs
                  ):
         '''
         Adagrad Optimizer
@@ -233,14 +234,14 @@ class AdaGrad:
         for i in range(self.epochs):
             grads = gradients(self.func,variables)
             self.s += np.square(grads)
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == gradients_config.func_type_min:
                 variables -= self.lr*grads/(np.sqrt(self.s+self.eps))
             else:
                 variables += self.lr*grads/(np.sqrt(self.s+self.eps))
             self.generations_points.append(variables)
             self.generations_targets.append(self.func(variables))
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == gradients_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]
@@ -276,12 +277,12 @@ class RMSProp:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type = basic_config.func_type_min,
-                 init_variables = basic_config.init_variables,
-                 lr = basic_config.rmsprop_lr,
-                 beta = basic_config.rmsprop_beta,
-                 eps = basic_config.eps,
-                 epochs = basic_config.epochs
+                 func_type = gradients_config.func_type_min,
+                 init_variables = gradients_config.init_variables,
+                 lr = gradients_config.rmsprop_lr,
+                 beta = gradients_config.rmsprop_beta,
+                 eps = gradients_config.eps,
+                 epochs = gradients_config.epochs
                  ):
         '''
         RMSProp Optimizer
@@ -319,14 +320,14 @@ class RMSProp:
         for i in range(self.epochs):
             grads = gradients(self.func,variables)
             self.s = self.beta*self.s + (1-self.beta)*np.square(grads)
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == gradients_config.func_type_min:
                 variables -= self.lr*grads/(np.sqrt(self.s+self.eps))
             else:
                 variables += self.lr*grads/(np.sqrt(self.s+self.eps))
             self.generations_points.append(variables)
             self.generations_targets.append(self.func(variables))
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == gradients_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]
@@ -362,13 +363,13 @@ class Adam:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type = basic_config.func_type_min,
-                 init_variables = basic_config.init_variables,
-                 lr = basic_config.adam_lr,
-                 beta1 = basic_config.adam_beta1,
-                 beta2 = basic_config.adam_beta2,
-                 eps = basic_config.eps,
-                 epochs = basic_config.epochs
+                 func_type = gradients_config.func_type_min,
+                 init_variables = gradients_config.init_variables,
+                 lr = gradients_config.adam_lr,
+                 beta1 = gradients_config.adam_beta1,
+                 beta2 = gradients_config.adam_beta2,
+                 eps = gradients_config.eps,
+                 epochs = gradients_config.epochs
                  ):
         '''
         Adam Optimizer
@@ -412,14 +413,14 @@ class Adam:
             self.s = self.beta2*self.s + (1-self.beta2)*np.square(grads)
             self.m /= (1-self.beta1**(i+1))
             self.s /= (1-self.beta2**(i+1))
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == gradients_config.func_type_min:
                 variables -= self.lr*self.m/(np.sqrt(self.s+self.eps))
             else:
                 variables += self.lr*self.m/(np.sqrt(self.s+self.eps))
             self.generations_points.append(variables)
             self.generations_targets.append(self.func(variables))
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == gradients_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]

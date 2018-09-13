@@ -25,13 +25,13 @@ class SA:
                  variables_num,
                  lower_bound,
                  upper_bound,
-                 func_type = basic_config.func_type_min,
-                 T_start=basic_config.T_start,
-                 T_end = basic_config.T_end,
-                 q = basic_config.q,
-                 L = basic_config.L,
+                 func_type = sa_config.func_type_min,
+                 T_start=sa_config.T_start,
+                 T_end = sa_config.T_end,
+                 q = sa_config.q,
+                 L = sa_config.L,
                  init_pos = None,
-                 complex_constraints = basic_config.complex_constraints,
+                 complex_constraints = sa_config.complex_constraints,
                  complex_constraints_method = complex_constraints_method.loop
                  ):
         '''
@@ -115,11 +115,11 @@ class SA:
             for i in range(self.L):
                 init_pos_disturb = self.random_disturb()
                 delta = self.func(init_pos_disturb)-self.func(self.init_pos)
-                if (self.func_type == basic_config.func_type_min and delta<0) \
-                        or (self.func_type == basic_config.func_type_max and delta > 0):
+                if (self.func_type == sa_config.func_type_min and delta<0) \
+                        or (self.func_type == sa_config.func_type_max and delta > 0):
                     self.init_pos = init_pos_disturb
                 else:
-                    if self.func_type == basic_config.func_type_min:
+                    if self.func_type == sa_config.func_type_min:
                         sign = 1
                     else:
                         sign = -1
@@ -131,7 +131,7 @@ class SA:
                 self.generations_best_targets.append(self.func(self.init_pos))
                 self.generations_best_points.append(self.init_pos)
             T *= self.q
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == sa_config.func_type_min:
             self.global_best_index = np.argmin(self.generations_best_targets)
             self.global_best_target = np.min(self.generations_best_targets)
             self.global_best_point = self.generations_best_points[int(np.argmin(np.array(self.generations_best_targets)))]

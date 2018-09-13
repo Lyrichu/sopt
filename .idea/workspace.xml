@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1918682-0a1e-4a38-be24-735c2318e0e3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sopt/Optimizers/Newton.py" />
+    <list default="true" id="69789069-be16-4951-a089-733d00ef99be" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/sopt/GA/GA.py" afterPath="$PROJECT_DIR$/sopt/GA/GA.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/Optimizers/Gradients.py" afterPath="$PROJECT_DIR$/sopt/Optimizers/Gradients.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/Optimizers/Newton.py" afterPath="$PROJECT_DIR$/sopt/Optimizers/Newton.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/Optimizers/RandomWalk.py" afterPath="$PROJECT_DIR$/sopt/Optimizers/RandomWalk.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/Optimizers/SA.py" afterPath="$PROJECT_DIR$/sopt/Optimizers/SA.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/PSO/PSO.py" afterPath="$PROJECT_DIR$/sopt/PSO/PSO.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/SGA/SGA.py" afterPath="$PROJECT_DIR$/sopt/SGA/SGA.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_AdaGrad.py" afterPath="$PROJECT_DIR$/sopt/test/test_AdaGrad.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_Adam.py" afterPath="$PROJECT_DIR$/sopt/test/test_Adam.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_BFGS.py" afterPath="$PROJECT_DIR$/sopt/test/test_BFGS.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_DFP.py" afterPath="$PROJECT_DIR$/sopt/test/test_DFP.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_GradientDescent.py" afterPath="$PROJECT_DIR$/sopt/test/test_GradientDescent.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_PSO.py" afterPath="$PROJECT_DIR$/sopt/test/test_PSO.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_RMSProp.py" afterPath="$PROJECT_DIR$/sopt/test/test_RMSProp.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/test/test_RandomWalk.py" afterPath="$PROJECT_DIR$/sopt/test/test_RandomWalk.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/functions.py" afterPath="$PROJECT_DIR$/sopt/util/functions.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/ga_config.py" afterPath="$PROJECT_DIR$/sopt/util/ga_config.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/gradients_config.py" afterPath="$PROJECT_DIR$/sopt/util/gradients_config.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/newton_config.py" afterPath="$PROJECT_DIR$/sopt/util/newton_config.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/pso_config.py" afterPath="$PROJECT_DIR$/sopt/util/pso_config.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/random_walk_config.py" afterPath="$PROJECT_DIR$/sopt/util/random_walk_config.py" />
+      <change beforePath="$PROJECT_DIR$/sopt/util/sa_config.py" afterPath="$PROJECT_DIR$/sopt/util/sa_config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,43 +34,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Newton.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sopt/Optimizers/Newton.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="test_all.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sopt/test/test_all.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="-181">
+              <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_DFP.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sopt/test/test_DFP.py">
+      <file leaf-file-name="test_RandomWalk.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sopt/test/test_RandomWalk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="567">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_BFGS.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sopt/test/test_BFGS.py">
+      <file leaf-file-name="RandomWalk.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sopt/Optimizers/RandomWalk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="438">
+              <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+              <folding>
+                <element signature="e#294#319#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_Adam.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sopt/test/test_Adam.py">
+      <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sopt/util/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
-              <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="27">
+              <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+              <folding>
+                <element signature="e#263#304#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,21 +88,54 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>basic_config</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>gradients</replace>
+      <replace>gradients_config</replace>
+      <replace>random_walk_config</replace>
+      <replace>newton_config</replace>
+      <replace>sa_config</replace>
+      <replace>pso_config</replace>
+      <replace>ga_config</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sopt/Optimizers/Newton.py" />
-        <option value="$PROJECT_DIR$/sopt/test/test_BFGS.py" />
         <option value="$PROJECT_DIR$/sopt/util/newton_config.py" />
-        <option value="$PROJECT_DIR$/sopt/test/test_Adam.py" />
+        <option value="$PROJECT_DIR$/sopt/util/ga_config.py" />
+        <option value="$PROJECT_DIR$/sopt/util/gradients_config.py" />
+        <option value="$PROJECT_DIR$/sopt/util/pso_config.py" />
+        <option value="$PROJECT_DIR$/sopt/util/random_walk_config.py" />
+        <option value="$PROJECT_DIR$/sopt/util/sa_config.py" />
         <option value="$PROJECT_DIR$/sopt/test/test_DFP.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_AdaGrad.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_Adam.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_BFGS.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_GradientDescent.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_RMSProp.py" />
+        <option value="$PROJECT_DIR$/sopt/util/functions.py" />
+        <option value="$PROJECT_DIR$/sopt/Optimizers/Gradients.py" />
+        <option value="$PROJECT_DIR$/sopt/Optimizers/Newton.py" />
+        <option value="$PROJECT_DIR$/sopt/GA/GA.py" />
+        <option value="$PROJECT_DIR$/sopt/PSO/PSO.py" />
+        <option value="$PROJECT_DIR$/sopt/SGA/SGA.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_all.py" />
+        <option value="$PROJECT_DIR$/sopt/Optimizers/RandomWalk.py" />
+        <option value="$PROJECT_DIR$/sopt/Optimizers/SA.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_PSO.py" />
+        <option value="$PROJECT_DIR$/sopt/test/test_RandomWalk.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="323" />
     <option name="y" value="218" />
     <option name="width" value="1400" />
@@ -100,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -124,16 +182,30 @@
               <item name="sopt" type="b2602c69:ProjectViewProjectNode" />
               <item name="sopt" type="462c0819:PsiDirectoryNode" />
               <item name="sopt" type="462c0819:PsiDirectoryNode" />
+              <item name="PSO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sopt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sopt" type="462c0819:PsiDirectoryNode" />
+              <item name="sopt" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sopt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sopt" type="462c0819:PsiDirectoryNode" />
+              <item name="sopt" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -147,25 +219,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="py.test in test_DFP.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.newton_config">
+    <configuration name="Gradients" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sopt/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sopt/Optimizers" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sopt" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/../../../../lyrichu\u0027s/ProgrammingWork/Pythonwork/sopt/sopt/test/test_DFP.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sopt/Optimizers/Gradients.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="newton_config" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sopt/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sopt" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sopt/util/newton_config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.Gradients" />
+      <item index="1" class="java.lang.String" itemvalue="Python.newton_config" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_DFP.py" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.newton_config" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Gradients" />
       </list>
     </recent_temporary>
   </component>
@@ -177,43 +275,44 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f1918682-0a1e-4a38-be24-735c2318e0e3" name="Default" comment="" />
-      <created>1536668881275</created>
+      <changelist id="69789069-be16-4951-a089-733d00ef99be" name="Default" comment="" />
+      <created>1536740777473</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1536668881275</updated>
+      <updated>1536740777473</updated>
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_DFP_py - 2018.09.11 at 22h 11m 00s.xml">
-      <configuration name="py.test in test_DFP.py" configurationId="tests" />
+    <history-entry file="py_test_in_mytest_DFP_py - 2018.09.12 at 16h 34m 55s.xml">
+      <configuration name="py.test in mytest_DFP.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_DFP_py - 2018.09.11 at 22h 11m 27s.xml">
-      <configuration name="py.test in test_DFP.py" configurationId="tests" />
+    <history-entry file="py_test_in_mytest_DFP_py - 2018.09.12 at 16h 35m 11s.xml">
+      <configuration name="py.test in mytest_DFP.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18867925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42343268" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65878725" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10894142" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35662898" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16957863" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -225,66 +324,244 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sopt/util/functions.py">
+    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/Gradients.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/Gradients.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1910">
-          <caret line="187" column="60" lean-forward="true" selection-start-line="170" selection-start-column="3" selection-end-line="187" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sopt/util/gradients_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="681">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/Newton.py">
+    <entry file="file://$PROJECT_DIR$/sopt/util/pso_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="573">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/util/sa_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sopt/util/newton_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sopt/test/test_BFGS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="729">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sopt/test/test_Adam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        <state relative-caret-position="708">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_BFGS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sopt/test/test_DFP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
+        <state relative-caret-position="1215">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_GA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#238#259#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_GradientDescent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_Momentum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_RMSProp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_SA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#238#259#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_SGA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-211">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#240#261#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/Gradients.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8252">
+          <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/Newton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2889">
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/GA/GA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9845">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/SGA/SGA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5740">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/util/ga_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_AdaGrad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/SA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/util/constraints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_PSO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-569">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/PSO/PSO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4853">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/util/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+          <folding>
+            <element signature="e#263#304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/util/random_walk_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/Optimizers/RandomWalk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+          <folding>
+            <element signature="e#294#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sopt/test/test_RandomWalk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>

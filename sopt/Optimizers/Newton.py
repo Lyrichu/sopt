@@ -11,25 +11,26 @@
 @description:
 newton based optimization method,like:dfp and bfgs
 """
+
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import linalg
-from sopt.util.newton_config import *
+from sopt.util.newton_config import newton_config
 from sopt.Optimizers.Gradients import gradients
 
 class DFP:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type = basic_config.func_type_min,
-                 eps = basic_config.eps,
-                 init_variables = basic_config.init_variables,
-                 epochs = basic_config.epochs,
-                 min_step = basic_config.min_step,
-                 max_step = basic_config.max_step,
-                 step_size = basic_config.step_size
+                 func_type = newton_config.func_type_min,
+                 eps = newton_config.eps,
+                 init_variables = newton_config.init_variables,
+                 epochs = newton_config.epochs,
+                 min_step = newton_config.min_step,
+                 max_step = newton_config.max_step,
+                 step_size = newton_config.step_size
                  ):
         '''
         newton based optimization method of dfp
@@ -67,7 +68,7 @@ class DFP:
         best_res = self.func(x-best_step*d)
         for step in np.arange(self.min_step,self.max_step,self.step_size):
             cur_res = self.func(x-step*d)
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == newton_config.func_type_min:
                 if cur_res < best_res:
                     best_step = step
                     best_res = cur_res
@@ -99,7 +100,7 @@ class DFP:
             self.generations_targets.append(self.func(x.flatten()))
 
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == newton_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]
@@ -134,13 +135,13 @@ class BFGS:
     def __init__(self,
                  func,
                  variables_num,
-                 func_type=basic_config.func_type_min,
-                 eps=basic_config.eps,
-                 init_variables=basic_config.init_variables,
-                 epochs=basic_config.epochs,
-                 min_step=basic_config.min_step,
-                 max_step=basic_config.max_step,
-                 step_size=basic_config.step_size
+                 func_type=newton_config.func_type_min,
+                 eps=newton_config.eps,
+                 init_variables=newton_config.init_variables,
+                 epochs=newton_config.epochs,
+                 min_step=newton_config.min_step,
+                 max_step=newton_config.max_step,
+                 step_size=newton_config.step_size
                  ):
         '''
         newton based optimization method of bfgs
@@ -178,7 +179,7 @@ class BFGS:
         best_res = self.func(x - best_step * d)
         for step in np.arange(self.min_step, self.max_step, self.step_size):
             cur_res = self.func(x - step * d)
-            if self.func_type == basic_config.func_type_min:
+            if self.func_type == newton_config.func_type_min:
                 if cur_res < best_res:
                     best_step = step
                     best_res = cur_res
@@ -208,7 +209,7 @@ class BFGS:
             self.generations_points.append(x.flatten())
             self.generations_targets.append(self.func(x.flatten()))
 
-        if self.func_type == basic_config.func_type_min:
+        if self.func_type == newton_config.func_type_min:
             self.global_best_target = np.min(np.array(self.generations_targets))
             self.global_best_index = np.argmin(np.array(self.generations_targets))
             self.global_best_point = self.generations_points[int(self.global_best_index)]

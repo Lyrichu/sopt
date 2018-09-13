@@ -26,5 +26,5 @@ class COMPLEX_CONSTRAINTS_METHOD:
     def __init__(self):
         self.loop = 'loop'
 
-basic_config = BASIC_CONFIG()
+random_walk_config = BASIC_CONFIG()
 complex_constraints_method = COMPLEX_CONSTRAINTS_METHOD()

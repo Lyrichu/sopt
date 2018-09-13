@@ -25,8 +25,11 @@ class BASIC_CONFIG:
         self.delta = 1e-8
         self.eps = 1e-8
         self.epochs = 100
+        self.min_step = -1.
+        self.max_step = 1.
+        self.step_size = 0.001
         self.init_variables = None
         self.func_type_min = 'min'
         self.func_type_max = 'max'
 
-basic_config = BASIC_CONFIG()
+gradients_config = BASIC_CONFIG()

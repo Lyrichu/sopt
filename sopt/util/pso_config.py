@@ -40,7 +40,7 @@ class COMPLEX_CONSTRAINTS_METHOD:
         # self.penalty = 'penalty'
         self.loop = 'loop'
 
-basic_config = BASIC_CONFIG()
+pso_config = BASIC_CONFIG()
 pso_w_method = PSO_W_METHOD()
 complex_constraints_method = COMPLEX_CONSTRAINTS_METHOD()
 

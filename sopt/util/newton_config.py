@@ -15,8 +15,8 @@ config for newton series method
 class BASIC_CONFIG:
     def __init__(self):
         self.delta = 1e-8
-        self.eps = 1e-8
-        self.epochs = 100
+        self.eps = 1e-6
+        self.epochs = 10
         self.init_variables = None
         self.func_type_min = 'min'
         self.func_type_max = 'max'
@@ -24,5 +24,7 @@ class BASIC_CONFIG:
         self.min_step = -1.
         self.step_size = 0.01
 
-basic_config = BASIC_CONFIG()
+newton_config = BASIC_CONFIG()
+
+
 

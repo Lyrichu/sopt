@@ -66,7 +66,7 @@ class COMPLEX_CONSTRAINTS_METHOD:
     def __init__(self):
         self.penalty = 'penalty'
 
-basic_config = BASIC_CONFIG()
+ga_config = BASIC_CONFIG()
 code_type = CODE_TYPE()
 select_method = SELECT_METHOD()
 cross_method = CROSS_METHOD()

@@ -11,45 +11,49 @@
 @description:
 useful functions defination for GA
 """
-from sopt.util.ga_config import *
+from sopt.util.ga_config import ga_config
 import math
 from functools import reduce
 
 Rosenbrock_lower_bound = -2.048
 Rosenbrock_upper_bound = 2.048
 Rosenbrock_variables_num = 2
-Rosenbrock_func_type = basic_config.func_type_max
+Rosenbrock_func_type = ga_config.func_type_max
 
 quadratic11_lower_bound = 1
 quadratic11_upper_bound = 11
 quadratic11_variables_num = 11
-quadratic11_func_type = basic_config.func_type_min
+quadratic11_func_type = ga_config.func_type_min
 
 quadratic50_lower_bound = 1
 quadratic50_upper_bound = 50
 quadratic50_variables_num = 50
-quadratic50_func_type = basic_config.func_type_min
+quadratic50_func_type = ga_config.func_type_min
 
 quadratic100_lower_bound = 1
 quadratic100_upper_bound = 100
 quadratic100_variables_num = 100
-quadratic100_func_type = basic_config.func_type_min
+quadratic100_func_type = ga_config.func_type_min
 
 quadratic500_lower_bound = 1
 quadratic500_upper_bound = 500
 quadratic500_variables_num = 500
-quadratic500_func_type = basic_config.func_type_min
+quadratic500_func_type = ga_config.func_type_min
 
 quadratic1000_lower_bound = 1
 quadratic1000_upper_bound = 1000
 quadratic1000_variables_num = 1000
-quadratic1000_func_type = basic_config.func_type_min
+quadratic1000_func_type = ga_config.func_type_min
 
 
 shubert2_lower_bound = -10
 shubert2_upper_bound = 10
 shubert2_variables_num = 2
-shubert2_func_type = basic_config.func_type_min
+shubert2_func_type = ga_config.func_type_min
+
+square2_variables_num = 2
+square2_func_type = ga_config.func_type_min
+
 
 def Rosenbrock(x):
     '''
@@ -109,6 +113,10 @@ def shubert2(x):
     :return:
     '''
     return _shubert(x,2)
+
+
+def square2(x):
+    return (x[0]-2)**2 + (x[0]*x[1]-4)**2 + 3
 
 
 

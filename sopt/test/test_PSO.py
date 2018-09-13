@@ -26,8 +26,8 @@ class TestPSO:
         self.variables_num = quadratic11_variables_num
         self.lower_bound = quadratic11_lower_bound
         self.upper_bound = quadratic11_upper_bound
-        self.c1 = basic_config.c1
-        self.c2 = basic_config.c2
+        self.c1 = pso_config.c1
+        self.c2 = pso_config.c2
         self.generations = 200
         self.population_size = 100
         self.vmax = 1

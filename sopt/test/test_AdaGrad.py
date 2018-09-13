@@ -14,7 +14,7 @@ test for AdaGrad
 import sys
 sys.path.append("..")
 from time import time
-from sopt.util.gradients_config import *
+from sopt.util.gradients_config import gradients_config
 from sopt.util.functions import *
 from sopt.Optimizers.Gradients import AdaGrad
 
@@ -26,7 +26,7 @@ class TestAdaGrad:
         self.variables_num = quadratic50_variables_num
         self.init_variables = None
         self.lr = 10
-        self.eps = basic_config.eps
+        self.eps = gradients_config.eps
         self.epochs = 2000
         self.AdaGrad = AdaGrad(**self.__dict__)
 

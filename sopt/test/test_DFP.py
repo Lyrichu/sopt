@@ -11,10 +11,11 @@
 @description:
 test for newton dfp
 """
+
 import sys
 sys.path.append("..")
 from time import time
-from sopt.util.newton_config import *
+from sopt.util.newton_config import newton_config
 from sopt.util.functions import *
 from sopt.Optimizers.Newton import DFP
 
@@ -25,11 +26,11 @@ class TestDFP:
         self.func_type = quadratic100_func_type
         self.variables_num = quadratic100_variables_num
         self.init_variables = None
-        self.min_step = basic_config.min_step
-        self.max_step = basic_config.max_step
-        self.step_size = basic_config.step_size
-        self.eps = basic_config.eps
-        self.epochs = 1000
+        self.min_step = newton_config.min_step
+        self.max_step = newton_config.max_step
+        self.step_size = newton_config.step_size
+        self.eps = newton_config.eps
+        self.epochs = newton_config.epochs
         self.DFP = DFP(**self.__dict__)
 
     def test(self):
@@ -43,4 +44,5 @@ class TestDFP:
 
 if __name__ == '__main__':
     TestDFP().test()
+
 
